@@ -1,0 +1,16 @@
+﻿<UserControl x:Class="BestProgram4Ever.UserControls.SettingsFrameControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BestProgram4Ever.UserControls"
+             mc:Ignorable="d" 
+             Height="1267" 
+             Width="1256">
+    <Grid>
+        <Image Height="1267"  
+               Width="1256" 
+               Source="/BestProgram4Ever;component/Images/settingsFrameImage.png"
+               RenderOptions.BitmapScalingMode="HighQuality"/>
+    </Grid>
+</UserControl>

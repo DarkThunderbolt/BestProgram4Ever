@@ -1,0 +1,44 @@
+﻿<UserControl x:Class="BestProgram4Ever.UserControls.SettingsButtonControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BestProgram4Ever.UserControls"
+             mc:Ignorable="d" 
+             Width="156"
+             Height="156"
+             Background="Transparent" 
+             >
+    <UserControl.Resources>
+        <Storyboard x:Key="enterAnim">
+            <DoubleAnimation Storyboard.TargetProperty="buttonImage.RenderTransform.Angle"
+                             To="-360"
+                             Duration="0:0:1"
+                             RepeatBehavior="Forever"/>
+        </Storyboard>
+        <Storyboard x:Key="leaveAnim">
+            <DoubleAnimation Storyboard.TargetProperty="buttonImage.RenderTransform.Angle"
+                             To="0" 
+                             Duration="0:0:0"/>
+        </Storyboard>
+    </UserControl.Resources>
+    <Canvas>
+        <Image Stretch="Fill" 
+               Name="buttonImage"
+               Source="/BestProgram4Ever;component/Images/settingButton_Image.png"
+               Width="156"
+               Height="156"
+               RenderTransformOrigin="0.5,0.5"
+               RenderOptions.BitmapScalingMode="HighQuality"
+               />
+        <Path Name="controledPart"
+              Fill="Transparent"
+              MouseEnter="controledPart_MouseEnter"
+              MouseLeave="controledPart_MouseLeave"
+              >
+            <Path.Data>
+                <EllipseGeometry  RadiusX="60" RadiusY="60" Center="78,78"></EllipseGeometry>
+            </Path.Data>
+        </Path>
+    </Canvas>
+</UserControl>

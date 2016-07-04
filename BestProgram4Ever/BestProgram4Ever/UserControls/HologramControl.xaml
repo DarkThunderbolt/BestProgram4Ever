@@ -1,0 +1,67 @@
+﻿<UserControl x:Class="BestProgram4Ever.UserControls.HologramControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BestProgram4Ever.UserControls"
+             mc:Ignorable="d" 
+             Height="1607" Width="1683">
+    <Grid>
+        <Image Name="hologramImage"
+               Source="/BestProgram4Ever;component/Images/fon.png" 
+               Stretch="Fill"    
+               RenderOptions.BitmapScalingMode="HighQuality"
+               >
+            <Image.OpacityMask>
+                <LinearGradientBrush >
+                    <GradientStop  Color="White" Offset="0"/>
+                    <GradientStop  Color="Transparent " Offset="0"/>
+                </LinearGradientBrush>
+            </Image.OpacityMask>
+        </Image>
+
+        <Image Name="hologramFrame"
+               Source="/BestProgram4Ever;component/Images/ramka.png" 
+               Stretch="Fill"        
+               RenderOptions.BitmapScalingMode="HighQuality"
+               >
+            <Image.OpacityMask>
+                <LinearGradientBrush>
+                    <GradientStop  Color="White" Offset="0"/>
+                    <GradientStop  Color="Transparent " Offset="0"/>
+                </LinearGradientBrush>
+            </Image.OpacityMask>
+        </Image>
+
+        <Path Name="hologramControl"
+              Fill="Transparent" 
+              >
+            <Path.Data>
+                <PathGeometry>
+                    <PathGeometry.Figures>
+                        <PathFigure StartPoint="0,780" IsClosed="True">
+                            <LineSegment Point="0,824"/>
+                            <LineSegment Point="879,1607"/>
+                            <LineSegment Point="1683,804"/>
+                            <LineSegment Point="879,0"/>
+                        </PathFigure>
+                    </PathGeometry.Figures>
+                </PathGeometry>
+            </Path.Data>
+        </Path>
+
+        <local:HologramListControl x:Name="processessFavoriteList" 
+                                   RenderTransformOrigin="0.5,0.5"
+                                   Opacity="0"
+                                   Margin="552,534,791,693" d:LayoutOverrides="HorizontalAlignment, VerticalAlignment">
+            <local:HologramListControl.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="2.5" ScaleY="2.5"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </local:HologramListControl.RenderTransform>
+        </local:HologramListControl>
+    </Grid>
+</UserControl>

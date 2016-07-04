@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="BestProgram4Ever.SettingsControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BestProgram4Ever"
+             xmlns:UserControl="clr-namespace:BestProgram4Ever.UserControls"
+             mc:Ignorable="d" 
+             Height="1267"
+             Width="1256">
+    <Grid>
+        <UserControl:settingsBackControl RenderTransformOrigin="0.5,0.5" Margin="94,104,86,184">
+            <UserControl:settingsBackControl.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="1.05" ScaleY="1.1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </UserControl:settingsBackControl.RenderTransform>
+        </UserControl:settingsBackControl>
+        <TextBlock  FontFamily="/BestProgram4Ever;component/Fonts/#Final Frontier"
+                    Foreground="#F5F5F5"
+                    Text="Process that must be hidden:"
+                    Margin="154,461,170,723"
+                    FontSize="74" />
+        <UserControl:SettingsListControl x:Name="banList"
+                                         Canvas.Left="274"
+                                         Width="950"
+                                         Canvas.Top="694" 
+                                         Margin="154,549,152,152"/>
+        <UserControl:SettingsFrameControl IsHitTestVisible="False"/>
+    </Grid>
+</UserControl>

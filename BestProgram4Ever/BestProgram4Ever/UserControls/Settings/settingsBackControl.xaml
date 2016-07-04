@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="BestProgram4Ever.UserControls.settingsBackControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BestProgram4Ever.UserControls"
+             mc:Ignorable="d"    
+             Height="979" 
+             Width="1075">
+    <Grid>
+        <Image Source="/BestProgram4Ever;component/Images/settingsBackImage.png"
+               Height="979" 
+               Width="1075"
+               Stretch="Fill"
+               RenderOptions.BitmapScalingMode="HighQuality"/>
+    </Grid>
+</UserControl>

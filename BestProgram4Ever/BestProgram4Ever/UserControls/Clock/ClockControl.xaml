@@ -1,0 +1,109 @@
+﻿<UserControl x:Class="BestProgram4Ever.UserControls.ClockControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BestProgram4Ever.UserControls"
+             mc:Ignorable="d" 
+             Height="635"
+             Width="1124"
+             >
+    <Grid>
+        <Image Source="/BestProgram4Ever;component/Images/clock_Image.png"
+               Height="635"
+               Width="1124"
+               Stretch="Fill"
+               RenderOptions.BitmapScalingMode="HighQuality"
+               />
+        <TextBlock Name="clockLabe_Hours"
+                   FontSize="96"
+                   FontFamily="/BestProgram4Ever;component/Fonts/#Final Frontier" 
+                   Foreground="#F5F5F5"
+                   TextAlignment="Left" 
+                   Text="{Binding timeNow, StringFormat=HH}"
+                   Margin="228,274,782,257"
+                   RenderTransformOrigin="0.5,0.5"  
+                   >
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="2" ScaleY="2"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBlock x:Name="clockLabe_Minutes"
+                   FontSize="96"
+                   FontFamily="/BestProgram4Ever;component/Fonts/#Final Frontier" 
+                   Foreground="#F5F5F5"
+                   TextAlignment="Center" 
+                   Text="{Binding timeNow, StringFormat=mm}"
+                   Margin="506,274,504,257"
+                   RenderTransformOrigin="0.5,0.5"  
+                   >
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="2" ScaleY="2"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBlock  x:Name="clockLabe_Seconds"
+        	        FontSize="96"
+        	        FontFamily="/BestProgram4Ever;component/Fonts/#Final Frontier" 
+        	        Foreground="#F5F5F5"
+        	        TextAlignment="Right" 
+        	        Text="{Binding timeNow, StringFormat=ss}"
+        	        Margin="782,274,228,257"
+        	        RenderTransformOrigin="0.5,0.5"  
+                   >
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="2" ScaleY="2"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBlock  x:Name="clockLabe_1"
+        	        FontSize="96"
+        	        FontFamily="/BestProgram4Ever;component/Fonts/#Final Frontier" 
+        	        Foreground="#F5F5F5"
+        	        TextAlignment="Center" 
+        	        Text=":" 
+        	        Margin="369,248,641,283"
+        	        RenderTransformOrigin="0.5,0.5"  
+                   >
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="2" ScaleY="2"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBlock  x:Name="clockLabe_2"
+        	        FontSize="96"
+        	        FontFamily="/BestProgram4Ever;component/Fonts/#Final Frontier" 
+        	        Foreground="#F5F5F5"
+        	        TextAlignment="Center" 
+        	        Text=":" 
+        	        Margin="641,248,369,283"
+        	        RenderTransformOrigin="0.5,0.5"  
+                   >
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="2" ScaleY="2"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+    </Grid>
+</UserControl>

@@ -1,0 +1,38 @@
+﻿<UserControl x:Class="BestProgram4Ever.UserControls.DoorControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BestProgram4Ever.UserControls"
+             mc:Ignorable="d" 
+             Height="1246"
+             d:DesignWidth="967"
+             >
+    <Grid x:Name="grid"
+          Height="1246"
+          Width="967">
+        <Grid.OpacityMask >
+            <ImageBrush ImageSource="/BestProgram4Ever;component/Images/background_Image.png" 
+                        Stretch="Uniform"/>
+        </Grid.OpacityMask>
+
+
+        <Image Name="upGate"
+               RenderOptions.BitmapScalingMode="HighQuality"
+               Source="/BestProgram4Ever;component/Images/up.png"
+               Margin="-10,-164,10,164"   
+               MouseLeftButtonDown="upGate_MouseLeftButtonDown" 
+               >
+
+        </Image>
+        <Image Name="downGate"
+               RenderOptions.BitmapScalingMode="HighQuality"
+               Source="/BestProgram4Ever;component/Images/down.png"
+               Margin="-10,148,10,-148" 
+               RenderTransformOrigin="0.5,0.5"      
+               MouseLeftButtonDown="upGate_MouseLeftButtonDown"
+               >
+        </Image>
+      
+    </Grid>
+</UserControl>
